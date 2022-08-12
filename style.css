@@ -26,6 +26,9 @@ section{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    
+    flex-direction: row;
+    
 }
 section .title{
     position: relative;
@@ -136,7 +139,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .scroll-up-btn.show{
-    bottom: 30px;
+    bottom: -100px;
     opacity: 1;
     pointer-events: auto;
 }
@@ -196,31 +199,40 @@ section .title::after{
 
 .about .title::after{
     content: "Qui suis-je?";
+    
 }
 .about .about-content .left{
     width: 45%;
 }
 .about .about-content .left img{
-    height: 400px;
+    height: 500px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
 }
 .about .about-content .right{
-    width: 55%;
-
+    width: 46%;
+    margin-right: 100px;
+    line-height: 35px;
+  
 }
 .about .about-content .right .text{
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 55px;
+    
+
 }
 .about .about-content .right .text span{
     color: #B88CCF;
+    line-height: 45px;
+
 
 }
 .about .about-content .right p{
     text-align: justify;
+    font-size: 20px;
 }
 .about .about-content .right a{
     display: inline-block;
@@ -239,50 +251,37 @@ section .title::after{
     background: none;
 }
 
-.services, .teams{
-    color:#fff;
-    background: #111;
-}
-.services .title::before,
-.teams .title::before{
-    background: #fff;
-}
-.services .title::after,
-.teams .title::after{
-    background: #111;
-    content: "Ce que je fournis";
-}
-.services .serv-content .card{
-    width: calc(33% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover{
-    background: #B88CCF
-}
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
-    font-size: 50px;
-    color: #FC85C9;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
+#me{
+    display:block;
+    text-align:center;
+    text-align:center;
+    padding:5px;
+    font-size:1.2em;
+  }
+  
+  .swiper-container{
+    width:100%;
+    overflow:hidden;
+    height:100vh;
+  }
+  
+  .swiper-slide{
+    
+    overflow:hidden;
+    width:80%;
+  }
+  .swiper-slide img{
+    width:80%;
+    margin-left: 150px;
+  }
+  
+  @media (max-width:576px){
+    
+   
+    .swiper-container{
+     height:100%;
+    }
+  }
 
 
 .skills .title::after{
@@ -292,12 +291,15 @@ section .title::after{
     width: calc(50% - 30px);
 }
 .skills .skills-content .left .text{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
+    line-height: 40px;
 }
 .skills .skills-content .left p{
     text-align: justify;
+    font-size: 20px;
+    line-height: 40px;
 }
 .skills .skills-content .left a{
     display: inline-block;
@@ -430,8 +432,19 @@ section .title::after{
     font-weight: 600;
     margin-bottom: 10px;
 }
+.contact .contact-content .texte{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 55px;
+
+}
+
 .contact .contact-content .left p{
     text-align: justify;
+    font-size: 20px;
+    margin-left: 55px;
+    line-height: 30px;
 }
 .contact .contact-content .left .icons{
     margin: 10px 0;
@@ -450,9 +463,13 @@ section .title::after{
 }
 .contact .contact-content .info .head{
     font-weight: 500;
+    font-size: 20px;
+
 }
 .contact .contact-content .info .sub-title{
     color: white;
+    font-size: 20px;
+
 }
 .contact .right form .fields{
     display: flex;
@@ -511,7 +528,7 @@ section .title::after{
 }
 .right form .button-area button:hover{
   color: #FC85C9;
-  background: none;
+  background: white;
 }
 footer{
     background: #B88CCF;
@@ -530,15 +547,41 @@ footer span a:hover{
 
 @media (max-width: 1104px) {
     .about .about-content .left img{
-        height: 350px;
-        width: 350px;
+        height: 530px;
+        width: 360px;
     }
+    .home{
+        display: flex;
+        background: url("./images/Group\ 28.png ") no-repeat center;
+        height: 100vh;
+        color: white;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'lobster two', sans-serif;
+    }
+    .swiper-container{
+        height:100%;
+       }
 }
 
 @media (max-width: 991px) {
     .max-width{
         padding: 0 50px;
     }
+    .home{
+        display: flex;
+        background: url("./images/Group\ 28.png") no-repeat center;
+        height: 100vh;
+        color: white;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'lobster two', sans-serif;
+    }
+    .swiper-container{
+        height:100%;
+       }
 }
 @media (max-width: 947px){
     .menu-btn{
@@ -570,6 +613,16 @@ footer span a:hover{
         margin: 20px 0;
         font-size: 25px;
     }
+    .home{
+        display: flex;
+        background: url("./images/Group\ 28.png") no-repeat center;
+        height: 100vh;
+        color: white;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'lobster two', sans-serif;
+    }
     .home .home-content .text-2{
         font-size: 70px;
     }
@@ -593,6 +646,7 @@ footer span a:hover{
     }
     .about .about-content .right{
         flex: 100%;
+        margin-right: none;
     }
     .services .serv-content .card{
         width: calc(50% - 10px);
@@ -603,11 +657,25 @@ footer span a:hover{
         width: 100%;
         margin-bottom: 35px;
     }
+    .swiper-container{
+        height:100%;
+        margin-left: -80px;
+       }
 }
 
 @media (max-width: 690px) {
     .max-width{
         padding: 0 23px;
+    }
+    .home{
+        display: flex;
+        background: url("./images/Group\ 28.png") no-repeat center;
+        height: 100vh;
+        color: white;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'lobster two', sans-serif;
     }
     .home .home-content .text-2{
         font-size: 60px;
@@ -621,9 +689,23 @@ footer span a:hover{
     .services .serv-content .card{
         width: 100%;
     }
+    .swiper-container{
+        height:100%;
+        margin-left: -80px;
+       }
 }
 
 @media (max-width: 500px) {
+    .home{
+        display: flex;
+        background: url("./images/Group\ 28.png") no-repeat center;
+        height: 100vh;
+        color: white;
+        min-height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: 'lobster two', sans-serif;
+    }
     .home .home-content .text-2{
         font-size: 50px;
     }
@@ -652,4 +734,8 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+    .swiper-container{
+        height:100%;
+        margin-left: -80px;
+       }
 }

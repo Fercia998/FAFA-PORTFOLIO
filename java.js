@@ -62,4 +62,26 @@ $(document).ready(function(){
             }
         }
     });
+
+    function SendMail() {
+        var params = {
+            nom : document.getElementById("Nom").value,
+            email_id : document.getElementById("email_id").value,
+            sujet : document.getElementById("sujet").value,
+            Message : document.getElementById("message").value
+        }
+        emailjs.send("service_fggrjtp", "template_mdyjxut", params).then(function (res){
+            alert("Success!" + res.status);
+        })
+    }
 });
+
+var mySwiper = new Swiper('.swiper-container',{speed: 400,
+    spaceBetween: 0,
+    grabCursor:true,
+                                            autoplay:{
+    autoplay:true,
+    delay:4000,                             disableOnInteraction:false         
+               }                       
+                                      });
+
